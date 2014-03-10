@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<TransXChange CreationDateTime="2014-01-07T08:53:39.5817809Z" ModificationDateTime="2014-01-07T08:53:39.5817809Z" Modification="new" FileName="tfl_30-CRj-3-y05.xml" RevisionNumber="3" SchemaVersion="2.1" xml:lang="en" xsi:schemaLocation="http://www.transxchange.org.uk/ http://www.transxchange.org.uk/schema/2.1/TransXChange_general.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.transxchange.org.uk/">
+	<NptgLocalities>
+		<AnnotatedNptgLocalityRef>
+			<NptgLocalityRef>E0034961</NptgLocalityRef>
+			<LocalityName>Westminster</LocalityName>
+		</AnnotatedNptgLocalityRef>
+		<AnnotatedNptgLocalityRef>
+			<NptgLocalityRef>E0034863</NptgLocalityRef>
+			<LocalityName>Wapping (London)</LocalityName>
+		</AnnotatedNptgLocalityRef>
+		<AnnotatedNptgLocalityRef>
+			<NptgLocalityRef>N0077694</NptgLocalityRef>
+			<LocalityName>London Bridge</LocalityName>
+		</AnnotatedNptgLocalityRef>
+		<AnnotatedNptgLocalityRef>
+			<NptgLocalityRef>N0060501</NptgLocalityRef>
+			<LocalityName>Southwark</LocalityName>
+		</AnnotatedNptgLocalityRef>
+		<AnnotatedNptgLocalityRef>
+			<NptgLocalityRef>N0077659</NptgLocalityRef>
+			<LocalityName>Embankment</LocalityName>
+		</AnnotatedNptgLocalityRef>
+		<AnnotatedNptgLocalityRef>
+			<NptgLocalityRef>N0077743</NptgLocalityRef>
+			<LocalityName>South Bank (London)</LocalityName>
+		</AnnotatedNptgLocalityRef>
+	</NptgLocalities>
+	<StopPoints>
+		<StopPoint CreationDateTime="2013-08-29T00:00:00">
+			<AtcoCode>9300WMR1</AtcoCode>
+			<Descriptor>
+				<CommonName>Westminster Pier</CommonName>
+			</Descriptor>
+			<Place>
+				<NptgLocalityRef>E0034961</NptgLocalityRef>
+				<Location Precision="1m">
+					<Easting>530351</Easting>
+					<Northing>179748</Northing>
+				</Location>
+			</Place>
+			<StopClassification>
+				<StopType>FBT</StopType>
+				<OffStreet>
+					<Ferry>
+						<Berth />
+					</Ferry>
+				</OffStreet>
+			</StopClassification>
+			<AdministrativeAreaRef>000</AdministrativeAreaRef>
+			<Notes>Westminster Pier</Notes>
+		</StopPoint>
+		<StopPoint CreationDateTime="2013-08-29T00:00:00">
+			<AtcoCode>9300STC1</AtcoCode>
+			<Descriptor>
+				<CommonName>St. Katharine's Pier</CommonName>
+			</Descriptor>
+			<Place>
+				<NptgLocalityRef>E0034863</NptgLocalityRef>
+				<Location Precision="1m">
+					<Easting>533792</Easting>
+					<Northing>180338</Northing>
+				</Location>
+			</Place>
+			<StopClassification>
+				<StopType>FBT</StopType>
+				<OffStreet>
+					<Ferry>
+						<Berth />
+					</Ferry>
+				</OffStreet>
+			</StopClassification>
+			<AdministrativeAreaRef>000</AdministrativeAreaRef>
+			<Notes>St. Katharine's Pier</Notes>
+		</StopPoint>
+		<StopPoint CreationDateTime="2013-08-29T00:00:00">
+			<AtcoCode>9300LBR1</AtcoCode>
+			<Descriptor>
+				<CommonName>London Bridge City Pier</CommonName>
+			</Descriptor>
+			<Place>
+				<NptgLocalityRef>N0077694</NptgLocalityRef>
+				<Location Precision="1m">
+					<Easting>532995</Easting>
+					<Northing>180387</Northing>
+				</Location>
+			</Place>
+			<StopClassification>
+				<StopType>FBT</StopType>
+				<OffStreet>
+					<Ferry>
+						<Berth />
+					</Ferry>
+				</OffStreet>
+			</StopClassification>
+			<AdministrativeAreaRef>000</AdministrativeAreaRef>
+			<Notes>London Bridge City Pier</Notes>
+		</StopPoint>
+		<StopPoint CreationDateTime="2013-08-29T00:00:00">
+			<AtcoCode>9300SWK1</AtcoCode>
+			<Descriptor>
+				<CommonName>Bankside Pier</CommonName>
+			</Descriptor>
+			<Place>
+				<NptgLocalityRef>N0060501</NptgLocalityRef>
+				<Location Precision="1m">
+					<Easting>532195</Easting>
+					<Northing>180579</Northing>
+				</Location>
+			</Place>
+			<StopClassification>
+				<StopType>FBT</StopType>
+				<OffStreet>
+					<Ferry>
+						<Berth />
+					</Ferry>
+				</OffStreet>
+			</StopClassification>
+			<AdministrativeAreaRef>000</AdministrativeAreaRef>
+			<Notes>Bankside Pier</Notes>
+		</StopPoint>
+		<StopPoint CreationDateTime="2013-08-29T00:00:00">
+			<AtcoCode>9300EMB1</AtcoCode>
+			<Descriptor>
+				<CommonName>Embankment Pier</CommonName>
+			</Descriptor>
+			<Place>
+				<NptgLocalityRef>N0077659</NptgLocalityRef>
+				<Location Precision="1m">
+					<Easting>530484</Easting>
+					<Northing>180388</Northing>
+				</Location>
+			</Place>
+			<StopClassification>
+				<StopType>FBT</StopType>
+				<OffStreet>
+					<Ferry>
+						<Berth />
+					</Ferry>
+				</OffStreet>
+			</StopClassification>
+			<AdministrativeAreaRef>000</AdministrativeAreaRef>
+			<Notes>Embankment Pier</Notes>
+		</StopPoint>
+		<StopPoint CreationDateTime="2013-08-29T00:00:00">
+			<AtcoCode>9300FES1</AtcoCode>
+			<Descriptor>
+				<CommonName>Festival Pier</CommonName>
+			</Descriptor>
+			<Place>
+				<NptgLocalityRef>N0077743</NptgLocalityRef>
+				<Location Precision="1m">
+					<Easting>530740</Easting>
+					<Northing>180359</Northing>
+				</Location>
+			</Place>
+			<StopClassification>
+				<StopType>FBT</StopType>
+				<OffStreet>
+					<Ferry>
+						<Berth />
+					</Ferry>
+				</OffStreet>
+			</StopClassification>
+			<AdministrativeAreaRef>000</AdministrativeAreaRef>
+			<Notes>Festival Pier</Notes>
+		</StopPoint>
+	</StopPoints>
+	<RouteSections>
+		<RouteSection id="RS_30-CR-j-y05-3-O-2">
+			<RouteLink id="RL_30-CR-j-y05-3-O-2-1">
+				<From>
+					<StopPointRef>9300WMR1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300EMB1</StopPointRef>
+				</To>
+				<Distance>714</Distance>
+				<Direction>outbound</Direction>
+			</RouteLink>
+			<RouteLink id="RL_30-CR-j-y05-3-O-2-2">
+				<From>
+					<StopPointRef>9300EMB1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300FES1</StopPointRef>
+				</To>
+				<Direction>outbound</Direction>
+			</RouteLink>
+			<RouteLink id="RL_30-CR-j-y05-3-O-2-3">
+				<From>
+					<StopPointRef>9300FES1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300SWK1</StopPointRef>
+				</To>
+				<Direction>outbound</Direction>
+			</RouteLink>
+			<RouteLink id="RL_30-CR-j-y05-3-O-2-4">
+				<From>
+					<StopPointRef>9300SWK1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300STC1</StopPointRef>
+				</To>
+				<Direction>outbound</Direction>
+			</RouteLink>
+			<RouteLink id="RL_30-CR-j-y05-3-O-2-5">
+				<From>
+					<StopPointRef>9300STC1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300WMR1</StopPointRef>
+				</To>
+				<Distance>4129</Distance>
+				<Direction>outbound</Direction>
+			</RouteLink>
+		</RouteSection>
+		<RouteSection id="RS_30-CR-j-y05-3-O-3">
+			<RouteLink id="RL_30-CR-j-y05-3-O-3-1">
+				<From>
+					<StopPointRef>9300WMR1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300EMB1</StopPointRef>
+				</To>
+				<Distance>714</Distance>
+				<Direction>outbound</Direction>
+			</RouteLink>
+			<RouteLink id="RL_30-CR-j-y05-3-O-3-2">
+				<From>
+					<StopPointRef>9300EMB1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300SWK1</StopPointRef>
+				</To>
+				<Direction>outbound</Direction>
+			</RouteLink>
+			<RouteLink id="RL_30-CR-j-y05-3-O-3-3">
+				<From>
+					<StopPointRef>9300SWK1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300STC1</StopPointRef>
+				</To>
+				<Direction>outbound</Direction>
+			</RouteLink>
+			<RouteLink id="RL_30-CR-j-y05-3-O-3-4">
+				<From>
+					<StopPointRef>9300STC1</StopPointRef>
+				</From>
+				<To>
+					<StopPointRef>9300WMR1</StopPointRef>
+				</To>
+				<Distance>4129</Distance>
+				<Direction>outbound</Direction>
+			</RouteLink>
+		</RouteSection>
+	</RouteSections>
+	<Routes>
+		<Route id="R_30-CR-j-y05-3-O-2">
+			<PrivateCode>R_30-CR-j-y05-3-O-2</PrivateCode>
+			<Description>Westminster Pier - Westminster Pier</Description>
+			<RouteSectionRef>RS_30-CR-j-y05-3-O-2</RouteSectionRef>
+		</Route>
+		<Route id="R_30-CR-j-y05-3-O-3">
+			<PrivateCode>R_30-CR-j-y05-3-O-3</PrivateCode>
+			<Description>Westminster Pier - Westminster Pier</Description>
+			<RouteSectionRef>RS_30-CR-j-y05-3-O-3</RouteSectionRef>
+		</Route>
+	</Routes>
+	<JourneyPatternSections>
+		<JourneyPatternSection id="JPS_30-CR-j-y05-3-3-3-O">
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-3-O-3-2">
+				<From SequenceNumber="1">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300WMR1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="2">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300EMB1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-3-1</RouteLinkRef>
+				<RunTime>PT5M</RunTime>
+			</JourneyPatternTimingLink>
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-3-O-3-3">
+				<From SequenceNumber="2">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300EMB1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="3">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300SWK1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-3-2</RouteLinkRef>
+				<RunTime>PT15M</RunTime>
+			</JourneyPatternTimingLink>
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-3-O-3-4">
+				<From SequenceNumber="3">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300SWK1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="4">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300STC1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-3-3</RouteLinkRef>
+				<RunTime>PT10M</RunTime>
+			</JourneyPatternTimingLink>
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-3-O-3-5">
+				<From SequenceNumber="4">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300STC1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="5">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300WMR1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-3-4</RouteLinkRef>
+				<RunTime>PT30M</RunTime>
+			</JourneyPatternTimingLink>
+		</JourneyPatternSection>
+		<JourneyPatternSection id="JPS_30-CR-j-y05-3-2-2-O">
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-2-O-2-2">
+				<From SequenceNumber="1">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300WMR1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="2">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300EMB1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-2-1</RouteLinkRef>
+				<RunTime>PT5M</RunTime>
+			</JourneyPatternTimingLink>
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-2-O-2-3">
+				<From SequenceNumber="2">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300EMB1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="3">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300FES1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-2-2</RouteLinkRef>
+				<RunTime>PT5M</RunTime>
+			</JourneyPatternTimingLink>
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-2-O-2-4">
+				<From SequenceNumber="3">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300FES1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="4">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300SWK1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-2-3</RouteLinkRef>
+				<RunTime>PT10M</RunTime>
+			</JourneyPatternTimingLink>
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-2-O-2-5">
+				<From SequenceNumber="4">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300SWK1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="5">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300STC1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-2-4</RouteLinkRef>
+				<RunTime>PT10M</RunTime>
+			</JourneyPatternTimingLink>
+			<JourneyPatternTimingLink id="JPL_30-CR-j-y05-3-2-O-2-6">
+				<From SequenceNumber="5">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300STC1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</From>
+				<To SequenceNumber="6">
+					<Activity>pickUpAndSetDown</Activity>
+					<StopPointRef>9300WMR1</StopPointRef>
+					<TimingStatus>PTP</TimingStatus>
+				</To>
+				<RouteLinkRef>RL_30-CR-j-y05-3-O-2-5</RouteLinkRef>
+				<RunTime>PT30M</RunTime>
+			</JourneyPatternTimingLink>
+		</JourneyPatternSection>
+	</JourneyPatternSections>
+	<Operators>
+		<Operator id="OId_CRC">
+			<OperatorCode>CRC</OperatorCode>
+			<OperatorShortName>Crown River Cruises</OperatorShortName>
+			<OperatorNameOnLicence>Crown River Cruises</OperatorNameOnLicence>
+			<TradingName>Crown River Cruises</TradingName>
+		</Operator>
+	</Operators>
+	<Services>
+		<Service>
+			<ServiceCode>30-CR-j-y05-3</ServiceCode>
+			<PrivateCode>30-CR-j-y05-3</PrivateCode>
+			<Lines>
+				<Line id="30-CR-j-y05-3">
+					<LineName>Westminster - St Katherine's Circular</LineName>
+				</Line>
+			</Lines>
+			<OperatingPeriod>
+				<StartDate>2014-01-01</StartDate>
+				<EndDate>2014-04-13</EndDate>
+			</OperatingPeriod>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<MondayToSunday />
+					</DaysOfWeek>
+				</RegularDayType>
+			</OperatingProfile>
+			<RegisteredOperatorRef>OId_CRC</RegisteredOperatorRef>
+			<StopRequirements>
+				<NoNewStopsRequired />
+			</StopRequirements>
+			<Mode>ferry</Mode>
+			<Description>Westminster - St Katharines - Westminster</Description>
+			<StandardService>
+				<Origin>Westminster Pier</Origin>
+				<Destination>Westminster Pier</Destination>
+				<JourneyPattern id="JP_30-CR-j-y05-3-3-O-3">
+					<Direction>outbound</Direction>
+					<Operational>
+						<VehicleType>
+							<VehicleTypeCode>FW</VehicleTypeCode>
+							<Description>Ferry (Wheelchair accessible)</Description>
+						</VehicleType>
+					</Operational>
+					<RouteRef>R_30-CR-j-y05-3-O-3</RouteRef>
+					<JourneyPatternSectionRefs>JPS_30-CR-j-y05-3-3-3-O</JourneyPatternSectionRefs>
+				</JourneyPattern>
+				<JourneyPattern id="JP_30-CR-j-y05-3-2-O-2">
+					<Direction>outbound</Direction>
+					<Operational>
+						<VehicleType>
+							<VehicleTypeCode>FW</VehicleTypeCode>
+							<Description>Ferry (Wheelchair accessible)</Description>
+						</VehicleType>
+					</Operational>
+					<RouteRef>R_30-CR-j-y05-3-O-2</RouteRef>
+					<JourneyPatternSectionRefs>JPS_30-CR-j-y05-3-2-2-O</JourneyPatternSectionRefs>
+				</JourneyPattern>
+			</StandardService>
+		</Service>
+	</Services>
+	<VehicleJourneys>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-1-T0</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<MondayToFriday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<BankHolidayOperation>
+					<DaysOfNonOperation>
+						<AllBankHolidays />
+					</DaysOfNonOperation>
+				</BankHolidayOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-1-T0</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-3-O-3</JourneyPatternRef>
+			<DepartureTime>11:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-13-T0</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<MondayToFriday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<BankHolidayOperation>
+					<DaysOfNonOperation>
+						<AllBankHolidays />
+					</DaysOfNonOperation>
+				</BankHolidayOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-13-T0</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-3-O-3</JourneyPatternRef>
+			<DepartureTime>12:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-15-T0</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<MondayToFriday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<BankHolidayOperation>
+					<DaysOfNonOperation>
+						<AllBankHolidays />
+					</DaysOfNonOperation>
+				</BankHolidayOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-15-T0</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-3-O-3</JourneyPatternRef>
+			<DepartureTime>13:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-17-T0</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<MondayToFriday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<BankHolidayOperation>
+					<DaysOfNonOperation>
+						<AllBankHolidays />
+					</DaysOfNonOperation>
+				</BankHolidayOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-17-T0</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-3-O-3</JourneyPatternRef>
+			<DepartureTime>14:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-19-T0</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<MondayToFriday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<BankHolidayOperation>
+					<DaysOfNonOperation>
+						<AllBankHolidays />
+					</DaysOfNonOperation>
+				</BankHolidayOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-19-T0</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-3-O-3</JourneyPatternRef>
+			<DepartureTime>15:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-27-T2</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Saturday />
+					</DaysOfWeek>
+				</RegularDayType>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-27-T2</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>11:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-29-T2</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Saturday />
+					</DaysOfWeek>
+				</RegularDayType>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-29-T2</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>11:40:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-31-T2</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Saturday />
+					</DaysOfWeek>
+				</RegularDayType>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-31-T2</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>12:20:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-33-T2</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Saturday />
+					</DaysOfWeek>
+				</RegularDayType>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-33-T2</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>13:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-35-T2</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Saturday />
+					</DaysOfWeek>
+				</RegularDayType>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-35-T2</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>13:40:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-37-T2</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Saturday />
+					</DaysOfWeek>
+				</RegularDayType>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-37-T2</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>14:20:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-39-T2</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Saturday />
+					</DaysOfWeek>
+				</RegularDayType>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-39-T2</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>15:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-27-T3</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Sunday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<SpecialDaysOperation>
+					<DaysOfOperation>
+						<DateRange>
+							<StartDate>2014-01-01</StartDate>
+							<EndDate>2014-01-01</EndDate>
+						</DateRange>
+					</DaysOfOperation>
+				</SpecialDaysOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-27-T3</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>11:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-29-T3</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Sunday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<SpecialDaysOperation>
+					<DaysOfOperation>
+						<DateRange>
+							<StartDate>2014-01-01</StartDate>
+							<EndDate>2014-01-01</EndDate>
+						</DateRange>
+					</DaysOfOperation>
+				</SpecialDaysOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-29-T3</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>11:40:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-31-T3</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Sunday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<SpecialDaysOperation>
+					<DaysOfOperation>
+						<DateRange>
+							<StartDate>2014-01-01</StartDate>
+							<EndDate>2014-01-01</EndDate>
+						</DateRange>
+					</DaysOfOperation>
+				</SpecialDaysOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-31-T3</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>12:20:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-33-T3</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Sunday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<SpecialDaysOperation>
+					<DaysOfOperation>
+						<DateRange>
+							<StartDate>2014-01-01</StartDate>
+							<EndDate>2014-01-01</EndDate>
+						</DateRange>
+					</DaysOfOperation>
+				</SpecialDaysOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-33-T3</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>13:00:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-35-T3</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Sunday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<SpecialDaysOperation>
+					<DaysOfOperation>
+						<DateRange>
+							<StartDate>2014-01-01</StartDate>
+							<EndDate>2014-01-01</EndDate>
+						</DateRange>
+					</DaysOfOperation>
+				</SpecialDaysOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-35-T3</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>13:40:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-37-T3</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Sunday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<SpecialDaysOperation>
+					<DaysOfOperation>
+						<DateRange>
+							<StartDate>2014-01-01</StartDate>
+							<EndDate>2014-01-01</EndDate>
+						</DateRange>
+					</DaysOfOperation>
+				</SpecialDaysOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-37-T3</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>14:20:00</DepartureTime>
+		</VehicleJourney>
+		<VehicleJourney>
+			<PrivateCode>tfl-30-CR-j-y05-3-39-T3</PrivateCode>
+			<Operational>
+				<VehicleType>
+					<VehicleTypeCode>FW</VehicleTypeCode>
+					<Description>Ferry (Wheelchair accessible)</Description>
+				</VehicleType>
+			</Operational>
+			<OperatingProfile>
+				<RegularDayType>
+					<DaysOfWeek>
+						<Sunday />
+					</DaysOfWeek>
+				</RegularDayType>
+				<SpecialDaysOperation>
+					<DaysOfOperation>
+						<DateRange>
+							<StartDate>2014-01-01</StartDate>
+							<EndDate>2014-01-01</EndDate>
+						</DateRange>
+					</DaysOfOperation>
+				</SpecialDaysOperation>
+			</OperatingProfile>
+			<VehicleJourneyCode>VJ_30-CR-j-y05-3-39-T3</VehicleJourneyCode>
+			<ServiceRef>30-CR-j-y05-3</ServiceRef>
+			<LineRef>30-CR-j-y05-3</LineRef>
+			<JourneyPatternRef>JP_30-CR-j-y05-3-2-O-2</JourneyPatternRef>
+			<DepartureTime>15:00:00</DepartureTime>
+		</VehicleJourney>
+	</VehicleJourneys>
+</TransXChange>

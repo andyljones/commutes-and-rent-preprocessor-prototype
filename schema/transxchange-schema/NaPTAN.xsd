@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- "V2.1  2005 09 05 
+            Change to ref NaPT stop 2.1 (Make Landmark and street optional) -->
+<!-- (c) Crown Copyright 2000-2005   -->            
+<xsd:schema xmlns="http://www.naptan.org.uk/" xmlns:napt="http://www.naptan.org.uk/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.naptan.org.uk/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="NaPTAN">
+    <xsd:annotation>
+        <xsd:appinfo xmlns:gms="http://www.govtalk.gov.uk/CM/gms">
+            <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+                <Aggregation>main schema</Aggregation>
+                <Audience>e-service developers</Audience>
+                <Contributor>Extensively Revised and Refactored for version 2.0 Kizoom Limited, by Tom White, Nicholas Knowles. mailto:schemer@kizoom.com</Contributor>
+                <Contributor>Roger Slevin [Roger.Slevin@dft.gsi.gov.uk]</Contributor>
+                <Contributor>Paul Robinson [carlbro]</Contributor>
+                <Contributor>Richard Mejia [carlbro]</Contributor>
+                <Coverage>United Kingdom</Coverage>
+                <Creator>Created as W3C .xsd schema by Atkins  as 1.0 XML schema, Richard Shaw mailto:Richard.shaw@wsatkins.com</Creator>
+                <Date>
+                    <Created>2003-02-10</Created>
+                </Date>
+                <Date>
+                    <Modified>2004-11-04</Modified>
+                </Date>
+                <Date>
+                    <Modified>2004-10-11</Modified>
+                </Date>
+                <Date>
+                    <Modified>2004-04-16</Modified>
+                </Date>
+                <Date>
+                    <Modified>2004-07-07</Modified>
+                </Date>
+                <Date>
+                    <Modified>2004-08-26</Modified>
+                </Date>
+                                <Date>
+                                    <Modified>2005-09-05</Modified>
+                </Date> 
+                
+                <Description>
+                    <p>NaPTAN is a UK nationwide system for identifying access points to Public Transport, and covers all transport modes. It is used in conjunction with other systems such as journey planners and real-time tracking systems.</p>
+                    <p>NaPTAN makes use of the National Public Transport Gazetteer to associate stops with  UK  towns and settlement that are accessible by Public Transport..</p>
+                </Description>
+                <Format>
+                    <MediaType>text/xml</MediaType>
+                    <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+                    <Description>XML schema, W3C Recommendation 2001</Description>
+                </Format>
+                <Identifier>{http://www.naptan.org.uk/schemas/2.1}NaPTAN.xsd</Identifier>
+                <Language>[ISO 639-2/B] ENG</Language>
+                <Publisher>Department for Transport, Great Minster House, 76 Marsham Street, London SW1P 4DR</Publisher>
+                <Relation>
+                    <Requires>http://www.naptan.org.uk/schemas/2.1/napt/NAPT_stop-v2-1.xsd</Requires>
+                </Relation>
+                <Rights>Unclassified
+                            <Copyright>Crown Copyright 2000-2005</Copyright>
+                </Rights>
+                <Source>
+                    <ul>
+                        <li>Originally developed as XML  in 2003 By Mike Ness, Richard Shaw, Atkins.</li>
+                    </ul>
+                </Source>
+                <Status>Version 2.1  </Status>
+                <Subject>
+                    <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+Air transport, Airports,
+Ports and maritime transport, Ferries (marine),
+Public transport, Bus services, Coach services, Bus stops and stations,
+Rail transport, Railway stations and track, Train services, Underground trains,
+Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
+Rail transport, Roads and road transport
+</Category>
+                    <Project>Transport Direct</Project>
+                </Subject>
+                <Title>NaPTAN XML schema for exchanging  National Public Transport Access Nodes data. </Title>
+                <Type>Standard</Type>
+            </Metadata>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <!-- ======================================================================= -->
+    <xsd:include schemaLocation="napt/NaPT_stop-v2-1.xsd"/>
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <xsd:element name="NaPTAN">
+        <xsd:annotation>
+            <xsd:documentation>Schema for exchanging National Public Transport Access Node data.
+@xml:lang
+@CreationDateTime,
+@ModificationDateTime,
+@Modification,
+@RevisionNumber,
+@Status,
+@FileName,
+@SchemaVersion,
+@LocationSystem</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="StopPoints" type="StopPointsStructure" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Definitions of districts.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="StopAreas" type="StopAreasStructure" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Definitions of stop areas.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attributeGroup ref="DocumentModificationDetailsGroup"/>
+            <xsd:attribute name="SchemaVersion" type="xsd:NMTOKEN" use="required" fixed="2.1"/>
+            <xsd:attribute name="LocationSystem" type="LocationSystemEnumeration" use="optional" default="Grid"/>
+        </xsd:complexType>
+        <xsd:key name="StopPointKey">
+            <xsd:selector xpath=".//napt:StopPoints/napt:StopPoint"/>
+            <xsd:field xpath="napt:AtcoCode"/>
+        </xsd:key>
+        <xsd:keyref name="StopPointKeyRef" refer="StopPointKey">
+            <xsd:selector xpath=".//napt:StopPointRef"/>
+            <xsd:field xpath="."/>
+        </xsd:keyref>
+        <xsd:unique name="StopPointPrivateKey">
+            <xsd:selector xpath=".//napt:StopPoints/napt:StopPoint"/>
+            <xsd:field xpath="napt:PrivateCode"/>
+        </xsd:unique>
+        <xsd:key name="StopAreaKey">
+            <xsd:selector xpath=".//napt:StopAreas/napt:StopArea"/>
+            <xsd:field xpath="napt:StopAreaCode"/>
+        </xsd:key>
+        <xsd:unique name="StopAreaPrivateKey">
+            <xsd:selector xpath=".//napt:StopAreas/napt:StopArea"/>
+            <xsd:field xpath="napt:PrivateCode"/>
+        </xsd:unique>
+    </xsd:element>
+    <!-- ======================================================================= -->
+    <!-- Group Definitions -->
+    <xsd:attributeGroup name="DocumentMetadataGroup">
+        <xsd:annotation>
+            <xsd:documentation>Grouping for document change metadata.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:attribute name="CreationDateTime" type="xsd:dateTime" use="required">
+            <xsd:annotation>
+                <xsd:documentation>Record of the date and time of creation of the NaPTAN file.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="FileName" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation>The name of the TransXChange file.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="SchemaVersion" type="xsd:NMTOKEN" use="required" fixed="2.1">
+            <xsd:annotation>
+                <xsd:documentation>The version of the schema that the NaPTAN instance document was written against. This attribute conforms with e-GIF guidance.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute ref="xml:lang"/>
+    </xsd:attributeGroup>
+    <!-- ======================================================================= -->
+</xsd:schema>
