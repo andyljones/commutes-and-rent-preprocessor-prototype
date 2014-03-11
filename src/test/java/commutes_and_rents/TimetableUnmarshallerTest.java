@@ -13,7 +13,7 @@ import uk.org.transxchange.TransXChange;
 public class TimetableUnmarshallerTest 
 {
     @Test
-    public void testUnmarshall() 
+    public void Unmarshall_OnAValidTestFile_ShouldReturnARootObjectWithTheCorrectAttributes() 
     {
         // Setup
         File testFile = TestTools.getTestFile(this, "/linear-timetable.xml");
