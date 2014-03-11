@@ -1,7 +1,6 @@
 package commutes_and_rents;
 
 import java.io.File;
-import java.net.URL;
 
 import org.junit.*;
 import org.junit.runner.*;

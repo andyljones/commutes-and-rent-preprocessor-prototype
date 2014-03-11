@@ -8,6 +8,11 @@ import javax.xml.bind.Unmarshaller;
 
 import uk.org.transxchange.TransXChange;
 
+/**
+ * Methods for fetching the root object of a TransXChange transit timetable.
+ * @author andy
+ *
+ */
 public class TimetableUnmarshaller 
 {
     /**
