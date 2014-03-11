@@ -1,14 +1,13 @@
 package commutes_and_rents;
 
+import io.github.andyljones.commutes_and_rents.TimetableUnmarshaller;
+
 import java.io.File;
 
 import org.junit.*;
-import org.junit.runner.*;
-import org.junit.runners.*;
 
 import uk.org.transxchange.TransXChange;
 
-@RunWith(JUnit4.class)
 public class TimetableUnmarshallerTest 
 {
     @Test

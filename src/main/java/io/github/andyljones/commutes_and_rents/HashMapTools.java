@@ -1,4 +1,4 @@
-package commutes_and_rents;
+package io.github.andyljones.commutes_and_rents;
 
 import java.util.ArrayList;
 import java.util.HashMap;
