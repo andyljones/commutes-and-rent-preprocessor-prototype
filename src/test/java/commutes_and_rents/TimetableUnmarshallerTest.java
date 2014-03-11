@@ -1,6 +1,7 @@
 package commutes_and_rents;
 
 import java.io.File;
+import java.net.URL;
 
 import org.junit.*;
 import org.junit.runner.*;
@@ -15,7 +16,7 @@ public class TimetableUnmarshallerTest
     public void testUnmarshall() 
     {
         // Setup
-        File testFile = new File("src/test/resources/linear-timetable.xml");
+        File testFile = TestTools.getTestFile(this, "/linear-timetable.xml");
         
         // Execution
         TransXChange result = TimetableUnmarshaller.unmarshall(testFile);
