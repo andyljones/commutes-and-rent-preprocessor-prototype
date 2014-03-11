@@ -14,23 +14,23 @@ import uk.org.transxchange.JourneyPatternStructure;
 import uk.org.transxchange.JourneyPatternTimingLinkStructure;
 import uk.org.transxchange.TransXChange;
 
-public class TraversalTimeHashMapFactory 
+public class TravelTimeHashMapFactory 
 {    
     final HashMap<String, JourneyPatternStructure> patternHashMap;
     final HashMap<String, JourneyPatternSectionStructure> sectionHashMap;
     
-    public HashMap<TransitLink, List<Duration>> getTraversalTimes() { return traversalTimes; }
-    final HashMap<TransitLink, List<Duration>> traversalTimes = new HashMap<TransitLink, List<Duration>>();
+    public TravelTimeHashMap getTraversalTimes() { return travelTimes; }
+    final TravelTimeHashMap travelTimes = new TravelTimeHashMap();
 
-    public TraversalTimeHashMapFactory(TransXChange timetableRoot)
+    public TravelTimeHashMapFactory(TransXChange timetableRoot)
     {
         patternHashMap = JourneyPatternHashMapFactory.build(timetableRoot);
         sectionHashMap = JourneySectionHashMapFactory.build(timetableRoot);
 
-        buildTraversalTimesHashMap(timetableRoot);
+        buildTravelTimesHashMap(timetableRoot);
     }
     
-    private void buildTraversalTimesHashMap(TransXChange timetableRoot)
+    private void buildTravelTimesHashMap(TransXChange timetableRoot)
     {
         List<AbstractVehicleJourneyStructure> journies = timetableRoot.getVehicleJourneys().getVehicleJourneyAndFlexibleVehicleJourney();
 
@@ -41,47 +41,45 @@ public class TraversalTimeHashMapFactory
             if (patternRef != null)
             {
                 JourneyPatternStructure pattern = patternHashMap.get(patternRef.getValue());
-                AddTraversalTimes(pattern);
+                addTravelTimes(pattern);
             }
         }
     }
     
-    private void AddTraversalTimes(JourneyPatternStructure pattern) 
+    private void addTravelTimes(JourneyPatternStructure pattern) 
     {        
         List<JourneyPatternSectionRefStructure> sectionRefs = pattern.getJourneyPatternSectionRefs();
         
         for (JourneyPatternSectionRefStructure sectionRef : sectionRefs)
         {
             JourneyPatternSectionStructure section = sectionHashMap.get(sectionRef.getValue());
-            AddTraversalTimes(section);
+            addTravelTimes(section);
         }
     }
 
-    private void AddTraversalTimes(JourneyPatternSectionStructure section) 
+    private void addTravelTimes(JourneyPatternSectionStructure section) 
     {
-        List<JourneyPatternTimingLinkStructure> timingLinks = section.getJourneyPatternTimingLink();
+        List<JourneyPatternTimingLinkStructure> links = section.getJourneyPatternTimingLink();
         
-        for (JourneyPatternTimingLinkStructure timingLink : timingLinks)
+        for (JourneyPatternTimingLinkStructure link : links)
         {
-            TransitLink transitLink = createTransitLink(timingLink);
-
-            if (!traversalTimes.containsKey(transitLink))
+            String origin = link.getFrom().getStopPointRef().getValue();
+            String destination = link.getTo().getStopPointRef().getValue();
+            Duration travelTime = link.getRunTime();
+            
+            if (!travelTimes.containsKey(origin))
+            {
+                HashMap<String, List<Duration>> newHashMap = new HashMap<String, List<Duration>>();
+                travelTimes.put(origin, newHashMap);
+            }
+            
+            if (!travelTimes.get(origin).containsKey(destination))
             {
                 List<Duration> newList = new ArrayList<Duration>();
-                traversalTimes.put(transitLink, newList);
+                travelTimes.get(origin).put(destination, newList);
             }
            
-            traversalTimes.get(transitLink).add(timingLink.getRunTime());
+            travelTimes.get(origin).get(destination).add(travelTime);
         }
-    }
-
-    private static TransitLink createTransitLink(JourneyPatternTimingLinkStructure timingLink) 
-    {
-        String origin = timingLink.getFrom().getStopPointRef().getValue();
-        String destination = timingLink.getTo().getStopPointRef().getValue();
-       
-        TransitLink transitLink = new TransitLink(origin, destination);
-        
-        return transitLink;
     }
 }

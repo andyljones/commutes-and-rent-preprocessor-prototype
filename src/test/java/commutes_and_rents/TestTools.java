@@ -18,13 +18,15 @@ public class TestTools {
     public static File getTestFile(Object origin, String resourcePath)
     {
         URL url = origin.getClass().getResource(resourcePath);
-        File file = new File(url.getFile());
-     
-        if (!file.exists())
+        
+        if (url == null)
         {
-            System.err.println("Test file " + resourcePath + "does not exist!");
+            System.err.println("Test file " + resourcePath + " does not exist!");
         }
         
+        File file = new File(url.getFile());
+     
+
         return file;
     }
     
