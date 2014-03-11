@@ -5,11 +5,14 @@ import java.util.List;
 
 import uk.org.transxchange.JourneyPatternStructure;
 import uk.org.transxchange.ServiceStructure;
+import uk.org.transxchange.TransXChange;
 
 public class JourneyPatternHashMapFactory {
 
-    public static HashMap<String, JourneyPatternStructure> build(List<ServiceStructure> services)
+    public static HashMap<String, JourneyPatternStructure> build(TransXChange root)
     {     
+        List<ServiceStructure> services = root.getServices().getService();
+        
         HashMap<String, JourneyPatternStructure> wholeHashmap = new HashMap<String, JourneyPatternStructure>();
         for (ServiceStructure service : services)
         {
