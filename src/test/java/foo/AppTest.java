@@ -8,7 +8,9 @@ import org.junit.runners.*;
 public class AppTest 
 {
     @Test
-    public void testParse()
+    public void testParse() 
+            throws Exception
     {
+        App.parse();
     }
 }
