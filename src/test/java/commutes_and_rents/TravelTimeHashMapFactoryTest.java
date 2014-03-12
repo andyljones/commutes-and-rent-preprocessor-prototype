@@ -3,10 +3,8 @@ package commutes_and_rents;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.xml.datatype.Duration;
-
-import io.github.andyljones.commutes_and_rents.TransitNeighbour;
-import io.github.andyljones.commutes_and_rents.TravelTimeHashMapFactory;
+import io.github.andyljones.commutes_and_rents.OutEdge;
+import io.github.andyljones.commutes_and_rents.EdgeHashMapFactory;
 
 import org.junit.*;
 
@@ -19,10 +17,10 @@ public class TravelTimeHashMapFactoryTest {
     {
         // Setup
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
-        TravelTimeHashMapFactory factory = new TravelTimeHashMapFactory(root);
+        EdgeHashMapFactory factory = new EdgeHashMapFactory(root);
         
         // Execution
-        HashMap<String, List<TransitNeighbour>> result = factory.getTraversalTimes();
+        HashMap<String, List<OutEdge>> result = factory.getTraversalTimes();
         
         // Verification
         int expected = 5;
@@ -35,10 +33,10 @@ public class TravelTimeHashMapFactoryTest {
     {
         // Setup
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
-        TravelTimeHashMapFactory factory = new TravelTimeHashMapFactory(root);
+        EdgeHashMapFactory factory = new EdgeHashMapFactory(root);
         
         // Execution
-        HashMap<String, List<TransitNeighbour>> result = factory.getTraversalTimes();
+        HashMap<String, List<OutEdge>> result = factory.getTraversalTimes();
         
         // Verification
         int expectedMinimum = 1;

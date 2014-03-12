@@ -3,7 +3,6 @@ package io.github.andyljones.commutes_and_rents;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
 
 import javax.xml.datatype.Duration;
 
@@ -15,15 +14,30 @@ import uk.org.transxchange.JourneyPatternStructure;
 import uk.org.transxchange.JourneyPatternTimingLinkStructure;
 import uk.org.transxchange.TransXChange;
 
-public class TravelTimeHashMapFactory 
+/**
+ * Parses a TransXChange timetable into a HashMap whose keys are NaPTAN StopPointRef codes and whose values are lists
+ * of edges out of that stop point, with one for each departure from the stop point.
+ * @author andy
+ *
+ */
+public class EdgeHashMapFactory 
 {    
+    /**
+     * A HashMap whose keys are NaPTAN StopPointRef codes and whose values are lists of edges out of that stop point, 
+     * with one for each departure from the stop point.
+     * @return
+     */
+    public HashMap<String, List<OutEdge>> getTraversalTimes() { return travelTimes; }
+    final HashMap<String, List<OutEdge>> travelTimes = new HashMap<>();
+    
     final HashMap<String, JourneyPatternStructure> patternHashMap;
     final HashMap<String, JourneyPatternSectionStructure> sectionHashMap;
     
-    public HashMap<String, List<TransitNeighbour>> getTraversalTimes() { return travelTimes; }
-    final HashMap<String, List<TransitNeighbour>> travelTimes = new HashMap<>();
-
-    public TravelTimeHashMapFactory(TransXChange timetableRoot)
+    /**
+     * Parses the timetable and initializes the property getTraversalTimes().
+     * @param timetableRoot
+     */
+    public EdgeHashMapFactory(TransXChange timetableRoot)
     {
         patternHashMap = JourneyPatternHashMapFactory.build(timetableRoot);
         sectionHashMap = JourneySectionHashMapFactory.build(timetableRoot);
@@ -46,7 +60,7 @@ public class TravelTimeHashMapFactory
             }
         }
     }
-    
+
     private void addTravelTimes(JourneyPatternStructure pattern) 
     {        
         List<JourneyPatternSectionRefStructure> sectionRefs = pattern.getJourneyPatternSectionRefs();
@@ -64,17 +78,23 @@ public class TravelTimeHashMapFactory
         
         for (JourneyPatternTimingLinkStructure link : links)
         {
-            String origin = link.getFrom().getStopPointRef().getValue();
-            String destination = link.getTo().getStopPointRef().getValue();
-            Duration travelTime = link.getRunTime();
-                        
-            if (!travelTimes.containsKey(origin))
-            {
-                List<TransitNeighbour> newList = new ArrayList<>();
-                travelTimes.put(origin, newList);
-            }
-            
-            travelTimes.get(origin).add(new TransitNeighbour(destination, travelTime));
+            addTravelTime(link);
         }
+    }
+    
+    private void addTravelTime(JourneyPatternTimingLinkStructure link)
+    {
+        String originRef = link.getFrom().getStopPointRef().getValue();
+        String destinationRef = link.getTo().getStopPointRef().getValue();
+        Duration travelTime = link.getRunTime();
+                    
+        if (!travelTimes.containsKey(originRef))
+        {
+            List<OutEdge> newList = new ArrayList<>();
+            travelTimes.put(originRef, newList);
+        }
+        
+        Node destination = new Node(destinationRef);
+        travelTimes.get(originRef).add(new OutEdge(destination, travelTime));
     }
 }
