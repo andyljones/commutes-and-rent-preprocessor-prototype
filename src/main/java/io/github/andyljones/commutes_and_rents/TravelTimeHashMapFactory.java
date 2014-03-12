@@ -3,6 +3,7 @@ package io.github.andyljones.commutes_and_rents;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 import javax.xml.datatype.Duration;
 
@@ -19,8 +20,8 @@ public class TravelTimeHashMapFactory
     final HashMap<String, JourneyPatternStructure> patternHashMap;
     final HashMap<String, JourneyPatternSectionStructure> sectionHashMap;
     
-    public TravelTimeHashMap getTraversalTimes() { return travelTimes; }
-    final TravelTimeHashMap travelTimes = new TravelTimeHashMap();
+    public HashMap<String, List<TransitNeighbour>> getTraversalTimes() { return travelTimes; }
+    final HashMap<String, List<TransitNeighbour>> travelTimes = new HashMap<>();
 
     public TravelTimeHashMapFactory(TransXChange timetableRoot)
     {
@@ -66,20 +67,14 @@ public class TravelTimeHashMapFactory
             String origin = link.getFrom().getStopPointRef().getValue();
             String destination = link.getTo().getStopPointRef().getValue();
             Duration travelTime = link.getRunTime();
-            
+                        
             if (!travelTimes.containsKey(origin))
             {
-                HashMap<String, List<Duration>> newHashMap = new HashMap<String, List<Duration>>();
-                travelTimes.put(origin, newHashMap);
+                List<TransitNeighbour> newList = new ArrayList<>();
+                travelTimes.put(origin, newList);
             }
             
-            if (!travelTimes.get(origin).containsKey(destination))
-            {
-                List<Duration> newList = new ArrayList<Duration>();
-                travelTimes.get(origin).put(destination, newList);
-            }
-           
-            travelTimes.get(origin).get(destination).add(travelTime);
+            travelTimes.get(origin).add(new TransitNeighbour(destination, travelTime));
         }
     }
 }

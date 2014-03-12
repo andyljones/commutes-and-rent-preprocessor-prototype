@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.xml.datatype.Duration;
 
-import io.github.andyljones.commutes_and_rents.TravelTimeHashMap;
+import io.github.andyljones.commutes_and_rents.TransitNeighbour;
 import io.github.andyljones.commutes_and_rents.TravelTimeHashMapFactory;
 
 import org.junit.*;
@@ -22,7 +22,7 @@ public class TravelTimeHashMapFactoryTest {
         TravelTimeHashMapFactory factory = new TravelTimeHashMapFactory(root);
         
         // Execution
-        TravelTimeHashMap result = factory.getTraversalTimes();
+        HashMap<String, List<TransitNeighbour>> result = factory.getTraversalTimes();
         
         // Verification
         int expected = 5;
@@ -31,19 +31,20 @@ public class TravelTimeHashMapFactoryTest {
     }
     
     @Test
-    public void TravelTimeHashMap_OnLinearRoute_EachKeyShouldHaveAHashMapWithOneOrTwoValues()
+    public void TravelTimeHashMap_OnLinearRoute_EachKeyShouldHaveAListWithOneOrTwoValues()
     {
         // Setup
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
         TravelTimeHashMapFactory factory = new TravelTimeHashMapFactory(root);
         
         // Execution
-        TravelTimeHashMap result = factory.getTraversalTimes();
+        HashMap<String, List<TransitNeighbour>> result = factory.getTraversalTimes();
         
         // Verification
-        for (HashMap<String, List<Duration>> hashMap : result.values())
-        {
-            Assert.assertTrue(1 <= hashMap.size() && hashMap.size() <= 2);
-        }
+        int expectedMinimum = 1;
+        int expectedMaximum = 2;
+        
+        Assert.assertTrue(result.values().stream().allMatch(list -> list.size() >= expectedMinimum));
+        Assert.assertTrue(result.values().stream().allMatch(list -> list.size() <= expectedMaximum));
     }
 }
