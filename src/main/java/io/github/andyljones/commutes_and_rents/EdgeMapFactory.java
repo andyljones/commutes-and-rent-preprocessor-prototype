@@ -4,21 +4,22 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class EdgeHashMapFactory {
+public class EdgeMapFactory {
 
     /**
-     * Takes a HashMap of departures from stop points and produces a HashMap of only the longest links to each 
+     * Takes a Map of departures from stop points and produces a Map of only the longest links to each 
      * destination. Effectively reduces a multigraph to a graph.
      * 
-     * @param allDepartures Departures from stop points, represented by a HashMap from a StopPointRef to a list of OutEdges.
-     * @return A HashMap of StopPointRefs to lists of the longest OutEdges.
+     * @param allDepartures Departures from stop points, represented by a Map from a StopPointRef to a list of OutEdges.
+     * @return A Map of StopPointRefs to lists of the longest OutEdges.
      */
-    public static HashMap<String, List<OutEdge>> build(HashMap<String, List<OutEdge>> allDepartures)
+    public static Map<String, List<OutEdge>> build(Map<String, List<OutEdge>> allDepartures)
     {
-        HashMap<String, List<OutEdge>> result = new HashMap<>();
+        Map<String, List<OutEdge>> result = new HashMap<>();
         
         for (String stopPointRef : allDepartures.keySet())
         {

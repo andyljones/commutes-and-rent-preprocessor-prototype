@@ -1,26 +1,26 @@
 package commutes_and_rents;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import io.github.andyljones.commutes_and_rents.OutEdge;
-import io.github.andyljones.commutes_and_rents.DepartureHashMapFactory;
+import io.github.andyljones.commutes_and_rents.DepartureMapFactory;
 
 import org.junit.*;
 
 import uk.org.transxchange.TransXChange;
 
-public class DepartureHashMapFactoryTest {
+public class DepartureMapFactoryTest {
 
     @Test
-    public void TravelTimeHashMap_OnTimetableWithFiveStops_ShouldHaveFiveEntries()
+    public void travelTimeMap_OnTimetableWithFiveStops_ShouldHaveFiveEntries()
     {
         // Setup
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
-        DepartureHashMapFactory factory = new DepartureHashMapFactory(root);
+        DepartureMapFactory factory = new DepartureMapFactory(root);
         
         // Execution
-        HashMap<String, List<OutEdge>> result = factory.getTraversalTimes();
+        Map<String, List<OutEdge>> result = factory.getTraversalTimes();
         
         // Verification
         int expected = 5;
@@ -29,14 +29,14 @@ public class DepartureHashMapFactoryTest {
     }
     
     @Test
-    public void TravelTimeHashMap_OnLinearRoute_EachKeyShouldHaveAListWithOneOrTwoValues()
+    public void travelTimeMap_OnLinearRoute_EachKeyShouldHaveAListWithOneOrTwoValues()
     {
         // Setup
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
-        DepartureHashMapFactory factory = new DepartureHashMapFactory(root);
+        DepartureMapFactory factory = new DepartureMapFactory(root);
         
         // Execution
-        HashMap<String, List<OutEdge>> result = factory.getTraversalTimes();
+        Map<String, List<OutEdge>> result = factory.getTraversalTimes();
         
         // Verification
         int expectedMinimum = 1;

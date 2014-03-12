@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import uk.org.transxchange.AbstractVehicleJourneyStructure;
 import uk.org.transxchange.JourneyPatternRefStructure;
@@ -14,23 +15,23 @@ import uk.org.transxchange.JourneyPatternTimingLinkStructure;
 import uk.org.transxchange.TransXChange;
 
 /**
- * Parses a TransXChange timetable into a HashMap whose keys are NaPTAN StopPointRef codes and whose values are lists
+ * Parses a TransXChange timetable into a Map whose keys are NaPTAN StopPointRef codes and whose values are lists
  * of edges out of that stop point, with one for each departure from the stop point.
  * @author andy
  *
  */
-public class DepartureHashMapFactory 
+public class DepartureMapFactory 
 {    
     /**
-     * A HashMap whose keys are NaPTAN StopPointRef codes and whose values are lists of edges out of that stop point, 
+     * A Map whose keys are NaPTAN StopPointRef codes and whose values are lists of edges out of that stop point, 
      * with one for each departure from the stop point.
      * @return
      */
-    public HashMap<String, List<OutEdge>> getTraversalTimes() { return travelTimes; }
-    private final HashMap<String, List<OutEdge>> travelTimes = new HashMap<>();
+    public Map<String, List<OutEdge>> getTraversalTimes() { return travelTimes; }
+    private final Map<String, List<OutEdge>> travelTimes = new HashMap<>();
     
-    private final HashMap<String, JourneyPatternStructure> patternHashMap;
-    private final HashMap<String, JourneyPatternSectionStructure> sectionHashMap;
+    private final Map<String, JourneyPatternStructure> patternMap;
+    private final Map<String, JourneyPatternSectionStructure> sectionMap;
     
     private final Date arbitraryDate = new Date();
     
@@ -38,15 +39,15 @@ public class DepartureHashMapFactory
      * Parses the timetable and initializes the property getTraversalTimes().
      * @param timetableRoot
      */
-    public DepartureHashMapFactory(TransXChange timetableRoot)
+    public DepartureMapFactory(TransXChange timetableRoot)
     {
-        patternHashMap = JourneyPatternHashMapFactory.build(timetableRoot);
-        sectionHashMap = JourneySectionHashMapFactory.build(timetableRoot);
+        patternMap = JourneyPatternMapFactory.build(timetableRoot);
+        sectionMap = JourneySectionMapFactory.build(timetableRoot);
 
-        buildTravelTimesHashMap(timetableRoot);
+        buildTravelTimesMap(timetableRoot);
     }
     
-    private void buildTravelTimesHashMap(TransXChange timetableRoot)
+    private void buildTravelTimesMap(TransXChange timetableRoot)
     {
         List<AbstractVehicleJourneyStructure> journies = timetableRoot.getVehicleJourneys().getVehicleJourneyAndFlexibleVehicleJourney();
 
@@ -56,7 +57,7 @@ public class DepartureHashMapFactory
 
             if (patternRef != null)
             {
-                JourneyPatternStructure pattern = patternHashMap.get(patternRef.getValue());
+                JourneyPatternStructure pattern = patternMap.get(patternRef.getValue());
                 addTravelTimes(pattern);
             }
         }
@@ -68,7 +69,7 @@ public class DepartureHashMapFactory
         
         for (JourneyPatternSectionRefStructure sectionRef : sectionRefs)
         {
-            JourneyPatternSectionStructure section = sectionHashMap.get(sectionRef.getValue());
+            JourneyPatternSectionStructure section = sectionMap.get(sectionRef.getValue());
             addTravelTimes(section);
         }
     }

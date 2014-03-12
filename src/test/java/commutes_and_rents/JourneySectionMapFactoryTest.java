@@ -1,8 +1,8 @@
 package commutes_and_rents;
 
-import io.github.andyljones.commutes_and_rents.JourneySectionHashMapFactory;
+import io.github.andyljones.commutes_and_rents.JourneySectionMapFactory;
 
-import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.junit.Test;
 import uk.org.transxchange.JourneyPatternSectionStructure;
 import uk.org.transxchange.TransXChange;
 
-public class JourneySectionHashMapFactoryTest {
+public class JourneySectionMapFactoryTest {
 
     @Test
     public void build_GivenATimetableWithTwoJourneyPatterns_ShouldReturnAHashMapWithTwoEntries()
@@ -19,7 +19,7 @@ public class JourneySectionHashMapFactoryTest {
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
         
         // Execution 
-        HashMap<String, JourneyPatternSectionStructure> result = JourneySectionHashMapFactory.build(root);
+        Map<String, JourneyPatternSectionStructure> result = JourneySectionMapFactory.build(root);
         
         // Verification
         Assert.assertEquals(2, result.size());
@@ -32,7 +32,7 @@ public class JourneySectionHashMapFactoryTest {
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
         
         // Execution 
-        HashMap<String, JourneyPatternSectionStructure> result = JourneySectionHashMapFactory.build(root);
+        Map<String, JourneyPatternSectionStructure> result = JourneySectionMapFactory.build(root);
         
         // Verification
         Assert.assertTrue(result.keySet().contains("js_1"));
