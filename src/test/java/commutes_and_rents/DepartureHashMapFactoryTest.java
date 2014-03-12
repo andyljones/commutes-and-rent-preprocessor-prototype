@@ -4,20 +4,20 @@ import java.util.HashMap;
 import java.util.List;
 
 import io.github.andyljones.commutes_and_rents.OutEdge;
-import io.github.andyljones.commutes_and_rents.EdgeHashMapFactory;
+import io.github.andyljones.commutes_and_rents.DepartureHashMapFactory;
 
 import org.junit.*;
 
 import uk.org.transxchange.TransXChange;
 
-public class TravelTimeHashMapFactoryTest {
+public class DepartureHashMapFactoryTest {
 
     @Test
     public void TravelTimeHashMap_OnTimetableWithFiveStops_ShouldHaveFiveEntries()
     {
         // Setup
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
-        EdgeHashMapFactory factory = new EdgeHashMapFactory(root);
+        DepartureHashMapFactory factory = new DepartureHashMapFactory(root);
         
         // Execution
         HashMap<String, List<OutEdge>> result = factory.getTraversalTimes();
@@ -33,7 +33,7 @@ public class TravelTimeHashMapFactoryTest {
     {
         // Setup
         TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
-        EdgeHashMapFactory factory = new EdgeHashMapFactory(root);
+        DepartureHashMapFactory factory = new DepartureHashMapFactory(root);
         
         // Execution
         HashMap<String, List<OutEdge>> result = factory.getTraversalTimes();
