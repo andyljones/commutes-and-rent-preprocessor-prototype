@@ -13,10 +13,15 @@ import uk.org.naptan.StopPointStructure;
 /**
  * Builds a map from StopAreaRefs to the StopPointRefs whose StopPoints have that StopAreaRef.
  * @author andy
- *
  */
 public class StopAreaRefToStopPointRefsMapFactory {
 
+    /**
+     * Builds a map from StopAreaRefs to the StopPointRefs whose StopPoints have that StopAreaRef.
+     * @param stopPointRefs The StopPointRefs to consider.
+     * @param stopPointMap A map from StopPointRefs to StopPoints.
+     * @return A map from StopAreaRefs to the StopPointRefs whose StopPoints have that StopAreaRef.
+     */
     public static Map<String, List<String>> build(Collection<String> stopPointRefs, Map<String, StopPointStructure> stopPointMap)
     {
         Map<String, List<String>> result = new HashMap<>();

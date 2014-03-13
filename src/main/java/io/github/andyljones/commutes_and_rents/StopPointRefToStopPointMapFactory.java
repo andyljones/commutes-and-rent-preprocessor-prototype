@@ -7,8 +7,18 @@ import java.util.Map;
 import uk.org.naptan.NaPTAN;
 import uk.org.naptan.StopPointStructure;
 
+/**
+ * Factory for building a map from StopPointRefs to their StopPoints.
+ * @author andy
+ *
+ */
 public class StopPointRefToStopPointMapFactory {
-
+    
+    /**
+     * Extracts a map from StopPointRefs to StopPoints from a NaPTAN model.
+     * @param root The root of the NaPTAN model.
+     * @return A map from StopPointRefs to StopPoints.
+     */
     public static Map<String, StopPointStructure> build(NaPTAN root)
     {
         List<StopPointStructure> stopPoints = root.getStopPoints().getStopPoint();
