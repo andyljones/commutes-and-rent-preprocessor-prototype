@@ -1,0 +1,48 @@
+package transit_graph;
+
+import java.util.List;
+import java.util.Map;
+
+import io.github.andyljones.transit_graph.DepartureMapFactory;
+import io.github.andyljones.transit_graph.OutEdge;
+
+import org.junit.*;
+
+import uk.org.transxchange.TransXChange;
+
+public class DepartureMapFactoryTest {
+
+    @Test
+    public void travelTimeMap_OnTimetableWithFiveStops_ShouldHaveFiveEntries()
+    {
+        // Setup
+        TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
+        DepartureMapFactory factory = new DepartureMapFactory(root);
+        
+        // Execution
+        Map<String, List<OutEdge>> result = factory.build();
+        
+        // Verification
+        int expected = 5;
+        int actual = result.size();
+        Assert.assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void travelTimeMap_OnLinearRoute_EachKeyShouldHaveAListWithOneOrTwoValues()
+    {
+        // Setup
+        TransXChange root = TestTools.getTransXChangeRoot(this, "/linear-timetable.xml");
+        DepartureMapFactory factory = new DepartureMapFactory(root);
+        
+        // Execution
+        Map<String, List<OutEdge>> result = factory.build();
+        
+        // Verification
+        int expectedMinimum = 1;
+        int expectedMaximum = 2;
+        
+        Assert.assertTrue(result.values().stream().allMatch(list -> list.size() >= expectedMinimum));
+        Assert.assertTrue(result.values().stream().allMatch(list -> list.size() <= expectedMaximum));
+    }
+}
