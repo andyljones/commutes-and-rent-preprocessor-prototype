@@ -23,13 +23,14 @@ public class TimetableFetcher {
     
     private static final String timetableDirectoryPath = "/timetables";
 
-    //****UNTESTED****
     /**
      * Fetches the root elements of each timetable in the timetable directory.
      * @return A list of root elements of timetables.
      */
     public static List<TransXChange> fetch()
     {
+        //****NOT UNDER TEST****//
+     
         List<Path> timetablePaths = getListOfTimetables();
         
         List<TransXChange> result = new ArrayList<>();
