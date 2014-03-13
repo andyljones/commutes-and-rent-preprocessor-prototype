@@ -1,6 +1,6 @@
 package commutes_and_rents;
 
-import io.github.andyljones.commutes_and_rents.StopAreaMapFactory;
+import io.github.andyljones.commutes_and_rents.StopAreaRefToStopPointRefsMapFactory;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import uk.org.naptan.StopAreaRefsStructure;
 import uk.org.naptan.StopAreaVersionedRefStructure;
 import uk.org.naptan.StopPointStructure;
 
-public class StopAreaMapFactoryTest {
+public class StopAreaRefToStopPointRefsMapFactoryTest {
 
     @Test
     public void build_GivenTwoStopPointsThatMapToTheSameStopArea_ShouldReturnAMapWithOneEntry()
@@ -27,7 +27,7 @@ public class StopAreaMapFactoryTest {
         mapData.put("point2", buildStopPointWithStopArea("area1"));
         
         // Execution
-        Map<String, List<String>> result = StopAreaMapFactory.build(listData, mapData);
+        Map<String, List<String>> result = StopAreaRefToStopPointRefsMapFactory.build(listData, mapData);
         
         // Verification
         int expected = 1;

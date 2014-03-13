@@ -7,7 +7,7 @@ import java.util.Map;
 import uk.org.naptan.NaPTAN;
 import uk.org.naptan.StopPointStructure;
 
-public class StopPointMapFactory {
+public class StopPointRefToStopPointMapFactory {
 
     public static Map<String, StopPointStructure> build(NaPTAN root)
     {

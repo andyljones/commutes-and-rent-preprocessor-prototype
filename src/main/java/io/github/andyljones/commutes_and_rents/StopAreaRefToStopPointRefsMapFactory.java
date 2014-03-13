@@ -10,7 +10,12 @@ import java.util.stream.Collectors;
 import uk.org.naptan.StopAreaVersionedRefStructure;
 import uk.org.naptan.StopPointStructure;
 
-public class StopAreaMapFactory {
+/**
+ * Builds a map from StopAreaRefs to the StopPointRefs whose StopPoints have that StopAreaRef.
+ * @author andy
+ *
+ */
+public class StopAreaRefToStopPointRefsMapFactory {
 
     public static Map<String, List<String>> build(Collection<String> stopPointRefs, Map<String, StopPointStructure> stopPointMap)
     {
