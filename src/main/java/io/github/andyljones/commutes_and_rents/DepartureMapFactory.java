@@ -27,7 +27,7 @@ public class DepartureMapFactory
      * with one for each departure from the stop point.
      * @return
      */
-    public Map<String, List<OutEdge>> getTraversalTimes() { return travelTimes; }
+    public Map<String, List<OutEdge>> build() { return travelTimes; }
     private final Map<String, List<OutEdge>> travelTimes = new HashMap<>();
     
     private final Map<String, JourneyPatternStructure> patternMap;

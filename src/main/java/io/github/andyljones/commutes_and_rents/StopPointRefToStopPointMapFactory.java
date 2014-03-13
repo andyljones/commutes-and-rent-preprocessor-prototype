@@ -31,4 +31,17 @@ public class StopPointRefToStopPointMapFactory {
         
         return result;
     }
+    
+    //TODO: Not tested
+    public static Map<String, StopPointStructure> build(List<NaPTAN> roots)
+    {
+        Map<String, StopPointStructure> result = new HashMap<>();
+        for (NaPTAN root : roots)
+        {
+            Map<String, StopPointStructure> map = build(root);
+            result.putAll(map);
+        }
+        
+        return result;
+    }
 }

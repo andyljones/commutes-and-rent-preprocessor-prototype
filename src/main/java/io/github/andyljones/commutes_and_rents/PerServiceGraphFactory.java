@@ -9,7 +9,7 @@ public class PerServiceGraphFactory {
     /**
      * @return The graph constructed by the factory, indexed by stop reference.
      */
-    public Map<String, Node> getNodeMap() { return nodeMap; }    
+    public Map<String, Node> build() { return nodeMap; }    
     private final Map<String, Node> nodeMap;
     
     /**

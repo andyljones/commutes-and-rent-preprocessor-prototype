@@ -1,6 +1,7 @@
 package io.github.andyljones.commutes_and_rents;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -23,7 +24,7 @@ public class TransitGraphUpdater {
      * @param graph Graph that will be altered.
      * @param cliquesToAdd Cliques to add.
      */
-    public void update(Map<String, Node> graph, Collection<Collection<String>> cliquesToAdd)
+    public void update(Map<String, Node> graph, Collection<List<String>> cliquesToAdd)
     {
         for (Collection<String> clique : cliquesToAdd)
         {
@@ -31,7 +32,7 @@ public class TransitGraphUpdater {
         }
     }
     
-    public void addClique(Map<String, Node> graph, Collection<String> cliqueToAdd)
+    private void addClique(Map<String, Node> graph, Collection<String> cliqueToAdd)
     {
         for (String nodeRef : cliqueToAdd)
         {

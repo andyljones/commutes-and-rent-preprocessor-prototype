@@ -20,7 +20,7 @@ public class DepartureMapFactoryTest {
         DepartureMapFactory factory = new DepartureMapFactory(root);
         
         // Execution
-        Map<String, List<OutEdge>> result = factory.getTraversalTimes();
+        Map<String, List<OutEdge>> result = factory.build();
         
         // Verification
         int expected = 5;
@@ -36,7 +36,7 @@ public class DepartureMapFactoryTest {
         DepartureMapFactory factory = new DepartureMapFactory(root);
         
         // Execution
-        Map<String, List<OutEdge>> result = factory.getTraversalTimes();
+        Map<String, List<OutEdge>> result = factory.build();
         
         // Verification
         int expectedMinimum = 1;

@@ -4,6 +4,8 @@ import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 import uk.org.naptan.NaPTAN;
 
@@ -14,30 +16,35 @@ import uk.org.naptan.NaPTAN;
  */
 public class NaptanFetcher {
     
-    private static final String naptanPath = "/underground-naptan.xml";
+    private static final List<String> naptanPaths = new ArrayList<String>() {{ add("/NaPTAN940.xml"); }};
 
     /**
      * Fetches the root element of the NaPTAN file.
      * @return The root element.
      */
-    public static NaPTAN fetch()
+    public static List<NaPTAN> fetch()
     {
         //****NOT UNDER TEST****//
      
-        File naptanFile = getNaptanFile();
-        NaPTAN result = NaptanUnmarshaller.unmarshall(naptanFile);
+        List<NaPTAN> result = new ArrayList<>();
         
-        System.out.println(result.getFileName());
+        for (String naptanPath : naptanPaths)
+        {
+            File naptanFile = getNaptanFile(naptanPath);
+            NaPTAN root = NaptanUnmarshaller.unmarshall(naptanFile);
+            
+            result.add(root);
+        }
         
         return result;
     }
     
-    private static File getNaptanFile()
+    private static File getNaptanFile(String fileName)
     {
         File naptanFile = null;
         try
         {
-            URI naptanURI = TimetableFetcher.class.getResource(naptanPath).toURI();
+            URI naptanURI = TimetableFetcher.class.getResource(fileName).toURI();
             naptanFile = Paths.get(naptanURI).toFile();
         }
         catch (URISyntaxException urie)

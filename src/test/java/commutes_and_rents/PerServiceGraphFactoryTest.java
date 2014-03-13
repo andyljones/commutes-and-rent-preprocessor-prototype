@@ -25,7 +25,7 @@ public class PerServiceGraphFactoryTest {
         data.put("nodeA", Arrays.asList(new OutEdge[] { edgeA }));
         
         // Execution
-        Map<String, Node> result = new PerServiceGraphFactory(data).getNodeMap();
+        Map<String, Node> result = new PerServiceGraphFactory(data).build();
         
         // Verification
         Node expected = result.values().stream().findFirst().get();

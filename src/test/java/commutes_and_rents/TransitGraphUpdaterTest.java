@@ -6,6 +6,7 @@ import io.github.andyljones.commutes_and_rents.TransitGraphUpdater;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
@@ -24,8 +25,8 @@ public class TransitGraphUpdaterTest {
         data1.put("nodeA", nodeA);
         data1.put("nodeB", nodeB);
         
-        Collection<String> temp = new ArrayList<String>() {{ add("nodeA"); add("nodeB"); }}; 
-        Collection<Collection<String>> data2 = new ArrayList<Collection<String>>() {{ add(temp); }};
+        List<String> temp = new ArrayList<String>() {{ add("nodeA"); add("nodeB"); }}; 
+        Collection<List<String>> data2 = new ArrayList<List<String>>() {{ add(temp); }};
         
         // Execution
         TransitGraphUpdater sut = new TransitGraphUpdater(0);
@@ -47,8 +48,8 @@ public class TransitGraphUpdaterTest {
         data1.put("nodeA", nodeA);
         data1.put("nodeB", nodeB);
         
-        Collection<String> temp = new ArrayList<String>() {{ add("nodeA"); add("nodeB"); }}; 
-        Collection<Collection<String>> data2 = new ArrayList<Collection<String>>() {{ add(temp); }};
+        List<String> temp = new ArrayList<String>() {{ add("nodeA"); add("nodeB"); }}; 
+        Collection<List<String>> data2 = new ArrayList<List<String>>() {{ add(temp); }};
         
         int edgeLength = 7;
         

@@ -39,8 +39,6 @@ public class TimetableFetcher {
             File file = path.toFile();
             TransXChange root = TimetableUnmarshaller.unmarshall(file);
             result.add(root);
-            
-            System.out.println(root.getServices().getService().get(0).getLines().getLine().get(0).getLineName().getValue());
         }
         
         return result;
